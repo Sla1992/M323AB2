@@ -51,6 +51,7 @@ const average = total / reviews.length;
 
 console.log("Average:", average);
 
+// group and count reviews into good, ok, and bad categories
 
 function groupReviews(values) {
   return values.reduce((acc, value) => {
