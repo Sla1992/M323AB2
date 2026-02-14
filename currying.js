@@ -9,6 +9,7 @@ const studentGrades = [
 ];
 
 // Function to Mutate from Numbers to Letter Grades
+
 const getLetterGrade = grade => {
   if (grade >= 90) return 'a';
   if (grade >= 80) return 'b';
@@ -18,12 +19,14 @@ const getLetterGrade = grade => {
 };
 
 // Currying-Function for Feedback
+
 const createFeedback = message => student => {
   const letter = getLetterGrade(student.grade);
   return `${message} ${student.name}, you got an ${letter}`;
 };
 
 // Specific Feedback-Functions for each letter grade
+
 const feedbackMessages = {
   a: createFeedback('Excellent Job'),
   b: createFeedback('Nice Job'),
@@ -32,7 +35,8 @@ const feedbackMessages = {
   f: createFeedback('Not good')
 };
 
-// Transformation
+// Transformation of the array
+
 const studentFeedback = studentGrades.map(student => {
   const letter = getLetterGrade(student.grade);
   return feedbackMessages[letter](student);
