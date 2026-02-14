@@ -35,3 +35,5 @@ const updatedUser = {
   ...user,
   age: 29
 };
+
+const { job, ...userWithoutJob } = user;
