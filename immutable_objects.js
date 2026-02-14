@@ -30,3 +30,8 @@ const benutzerMitStadt = {
   ...benutzer,
   city: "Bern"
 };
+
+const updatedUser = {
+  ...user,
+  age: 29
+};
