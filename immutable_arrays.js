@@ -12,3 +12,14 @@ const users = [
     job: "Software Developer"
   }
 ];
+
+// new array with additional user object
+
+const usersWithNewUser = [
+  ...users,
+  {
+    id: 3,
+    name: "Mark",
+    job: "Data Analyst"
+  }
+];
