@@ -18,3 +18,10 @@ person.alter = 26;
 
  // primitive datatype
  const alter = 30;
+
+ // object with 3 properties
+ const user = {
+  name: "Lukas",
+  age: 28,
+  job: "Information Technologist"
+};
