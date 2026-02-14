@@ -25,3 +25,8 @@ person.alter = 26;
   age: 28,
   job: "Information Technologist"
 };
+
+const benutzerMitStadt = {
+  ...benutzer,
+  city: "Bern"
+};
