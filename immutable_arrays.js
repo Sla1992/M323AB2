@@ -32,3 +32,21 @@ const updatedUsers = users.map(user =>
     : user
 );
 
+const smallestId = Math.min(...users.map(user => user.id));
+const usersWithoutSmallestId = users.filter(user => user.id !== smallestId);
+
+// new array with random numbers
+
+const reviews = [4.5, 4.0, 5.0, 2.0, 1.0, 5.0, 3.0, 4.0, 1.0, 5.0, 4.5, 3.0, 2.5, 2.0];
+
+// sum of all 
+
+const total = reviews.reduce((sum, currentValue) => {
+  return sum + currentValue;
+}, 0);
+
+// average rating
+
+const average = total / reviews.length;
+
+console.log("Average:", average);
