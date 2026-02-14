@@ -50,3 +50,27 @@ const total = reviews.reduce((sum, currentValue) => {
 const average = total / reviews.length;
 
 console.log("Average:", average);
+
+
+function groupReviews(values) {
+  return values.reduce((acc, value) => {
+
+    if (value >= 4) {
+      acc.good++;
+    } else if (value >= 2.5) {
+      acc.ok++;
+    } else {
+      acc.bad++;
+    }
+
+    return acc;
+  }, {
+    good: 0,
+    ok: 0,
+    bad: 0
+  });
+}
+
+const groupedResults = groupReviews(reviews);
+
+console.log(groupedResults);
